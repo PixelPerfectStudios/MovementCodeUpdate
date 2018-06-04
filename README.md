@@ -8,7 +8,6 @@ using System.Collections;
 [RequireComponent(typeof(CharacterController))]
 public class Test : MonoBehaviour
 {
-
     public float walkSpeed = 6.0f;
 
     public float runSpeed = 11.0f;
@@ -74,6 +73,7 @@ public class Test : MonoBehaviour
         rayDistance = controller.height * .5f + controller.radius;
         slideLimit = controller.slopeLimit - .1f;
         jumpTimer = antiBunnyHopFactor;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void FixedUpdate()
